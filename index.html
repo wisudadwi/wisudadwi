@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ucapan Wisuda — Selamat Wisuda!</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind (CDN) -->
+  <script>
+    tailwind_config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            body: ['Poppins', 'sans-serif']
+          },
+          colors: {
+            gold1: '#D4AF37',
+            gold2: '#BFA041',
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+  <style>
+    :root {
+      --bg-grad: linear-gradient(180deg, rgba(212,175,55,0.14), rgba(0,0,0,0.85) 50%), radial-gradient(1000px 600px at 10% 20%, rgba(212,175,55,0.05), transparent);
+    }
+    body { font-family: Poppins, sans-serif; background-image: var(--bg-grad); background-color: #000; color: #fff; }
+    .glass { background: rgba(255,255,255,0.03); backdrop-filter: blur(6px); }
+    .max-w-site { max-width: 1100px; }
+    html {
+      scroll-behavior: smooth;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #D4AF37; /* gold1 */
+    }
+
+    .swiper-pagination-bullet {
+      background: rgba(255,255,255,0.6);
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #D4AF37;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-start justify-center py-8 px-4">
+
+  <main class="w-full max-w-site mx-auto">
+    <!-- Hero -->
+    <section class="mb-8">
+      <div class="glass rounded-2xl p-6 md:p-10 shadow-2xl border border-transparent">
+        <div class="flex flex-col md:flex-row items-center gap-6">
+          <div class="flex-1 text-center md:text-left">
+            <h1 class="text-3xl md:text-5xl font-display font-semibold leading-tight" id="typed-target"></h1>
+            <p class="mt-4 text-sm md:text-base text-gray-200">Selamat atas wisudanya! Semoga langkah baru dibarengi keberkahan dan kesuksesan.</p>
+            <div class="mt-5 flex flex-wrap justify-center md:justify-start gap-3">
+              <a href="#gallery" class="px-4 py-2 rounded-full font-medium glass hover:scale-105 transition">Lihat Galeri</a>
+              <a href="#messages" class="px-4 py-2 rounded-full font-medium bg-gold1 text-black hover:opacity-90 transition">Baca Ucapan</a>
+              <!-- Tambahan tombol meriah -->
+              <button id="celebrateBtn" class="px-4 py-2 rounded-full font-medium bg-black border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black hover:scale-105 transition">Meriahkan 🎉</button>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 flex justify-center">
+            <img src="pp.jpg"
+                 alt="Foto wisuda" class="w-48 h-48 md:w-56 md:h-56 object-cover rounded-full border-4 border-gold1 shadow-lg"
+                 data-aos="zoom-in" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tambahan: Informasi Kuliah -->
+    <section id="kuliah" class="mb-10">
+      <h2 class="text-2xl md:text-3xl font-semibold mb-4">Informasi Perjalanan Kuliah</h2>
+      <div class="glass rounded-xl p-6 shadow-lg grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div data-aos="fade-up">
+          <p class="text-4xl font-bold text-gold1">4</p>
+          <p class="mt-2 text-sm">Tahun Perkuliahan</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100">
+          <p class="text-4xl font-bold text-gold1">144</p>
+          <p class="mt-2 text-sm">SKS Diselesaikan</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <p class="text-4xl font-bold text-gold1">3.75</p>
+          <p class="mt-2 text-sm">IPK</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300">
+          <p class="text-4xl font-bold text-gold1">∞</p>
+          <p class="mt-2 text-sm">Kenangan Indah</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="mb-10">
+      <h2 class="text-2xl md:text-3xl font-semibold mb-4">Galeri Kenangan</h2>
+      <div class="glass rounded-xl p-4 shadow-lg">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide rounded-lg overflow-hidden" data-aos="fade-up">
+              <img src="kenangan (1).jpg" alt="Kenangan 1" loading="lazy" class="w-full h-64 object-cover">
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+              <img src="kenangan (2).jpg" alt="Kenangan 2" loading="lazy" class="w-full h-64 object-cover">
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+              <img src="kenangan (3).jpg" alt="Kenangan 3" loading="lazy" class="w-full h-64 object-cover">
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+              <img src="kenangan (4).jpg" alt="Kenangan 4" loading="lazy" class="w-full h-64 object-cover">
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+              <img src="kenangan (5).jpg" alt="Kenangan 5" loading="lazy" class="w-full h-64 object-cover">
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="500">
+              <img src="kenangan (6).jpg" alt="Kenangan 1" loading="lazy" class="w-full h-64 object-cover">
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="600">
+              <img src="kenangan (7).jpg" alt="Kenangan 2" loading="lazy" class="w-full h-64 object-cover">
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="700">
+              <img src="kenangan (8).jpg" alt="Kenangan 3" loading="lazy" class="w-full h-64 object-cover">
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="800">
+              <img src="kenangan (9).jpg" alt="Kenangan 4" loading="lazy" class="w-full h-64 object-cover">
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="900">
+              <img src="kenangan (10).jpg" alt="Kenangan 5" loading="lazy" class="w-full h-64 object-cover">
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="1000">
+              <img src="kenangan (11).jpg" alt="Kenangan 1" loading="lazy" class="w-full h-64 object-cover">
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="1100">
+              <img src="kenangan (12).jpg" alt="Kenangan 2" loading="lazy" class="w-full h-64 object-cover">
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="1200">
+              <img src="kenangan (13).jpg" alt="Kenangan 3" loading="lazy" class="w-full h-64 object-cover">
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="1300">
+              <img src="kenangan (14).jpg" alt="Kenangan 4" loading="lazy" class="w-full h-64 object-cover">
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="1400">
+              <img src="kenangan (15).jpg" alt="Kenangan 5" loading="lazy" class="w-full h-64 object-cover">
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="1500">
+              <img src="kenangan (16).jpg" alt="Kenangan 1" loading="lazy" class="w-full h-64 object-cover">
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="1600">
+              <img src="kenangan (17).jpg" alt="Kenangan 2" loading="lazy" class="w-full h-64 object-cover">
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="1700">
+              <img src="kenangan (18).jpg" alt="Kenangan 3" loading="lazy" class="w-full h-64 object-cover">
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="1800">
+              <img src="kenangan (19).jpg" alt="Kenangan 4" loading="lazy" class="w-full h-64 object-cover">
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="1900">
+              <img src="kenangan (20).jpg" alt="Kenangan 5" loading="lazy" class="w-full h-64 object-cover">
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="2000">
+              <img src="kenangan (21).jpg" alt="Kenangan 5" loading="lazy" class="w-full h-64 object-cover">
+            </div>
+          </div>
+          <div class="flex items-center justify-between mt-4">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Messages -->
+    <section id="messages" class="mb-10">
+      <h2 class="text-2xl md:text-3xl font-semibold mb-4">Pesan Personal</h2>
+      <div class="glass rounded-xl p-4 shadow-lg">
+        <div id="messages-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-xs text-gray-400 mt-6">
+      © <span id="year"></span> Ucapan Wisuda • Template by Mas jaka sangar • Built with Tailwind, Typed.js, AOS, Swiper, canvas-confetti
+    </footer>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+  <script>
+    const MAX_MESSAGES = 10;
+    const sampleMessages = [
+      { name: "Fariz (Offliner IG)", photo: "fariz.jpg", message: "Selamat wisuda, semoga ilmunya bermanfaat, sukses dimulai dari s" },
+      { name: "Ali (Midliner IG)", photo: "ali.jpg", message: "Selamat atas kelulusannya wi. sekarang waktunya menempuh gelar magisternya. semangat dan jangan pernah berhenti untuk berkarya" },
+      { name: "Septa (Goldliner IG)", photo: "septa.jpg", message: "Pingin ngucapno “welcome to the real world”, tapi sek lanjut jenjang selanjutnya. Tapi “welcome to the real world” bukan selalu tentang lepas dari pendidikan, tapi tentang merasakan berbagai dinamika kehidupan bersama dengan orang-orang yang kita anggap “keluarga” yang sedang berjuang melawan takdirnya masing-masing. Selamat untuk S1-nya! Semoga di S2 ini pak dosen tetap mau ngasih saya tutor tentang dunia web development!✨" },
+      { name: "Zakaria (Roamer KDA)", photo: "zakaria.jpg", message: "Terima kasih sudah jadi rumah kedua buatku. Terima kasih juga sudah jadi keluarga kedua, orang yang bikin aku ketawa dan merasa bahagia. Di hari kelulusanmu ini, semoga semua langkah ke depan dilancarkan. Santai aja, ini masih awal tangga — masih banyak anak tangga lain yang harus kamu naikin: entah lanjut S2, cari kerja, jadi dosen, programmer, atau apapun itu… yang penting semoga itu jadi jalan terbaik buatmu. Aku juga mau minta maaf kalau pernah bikin kamu kecewa. Dan apapun keadaannya, kalau kamu butuh sesuatu tinggal panggil aja, aku bakal langsung meluncur ke ADF" }
+    ];
+
+    function getLimitedMessages(arr){ return arr.slice(0, MAX_MESSAGES); }
+
+    function initTyped() {
+      new Typed('#typed-target', {
+        strings: ["Selamat Wisuda, Mas Dwi!", "Coach ADF Esport dan IG", "Anjay wes lulussss"],
+        typeSpeed: 45, backSpeed: 25, backDelay: 1800, loop: true, cursorChar: "|"
+      });
+    }
+
+    function initAOS(){ AOS.init({ duration:700, once:true, easing:'ease-out-cubic' }); }
+
+    function runConfettiOnce(){
+      if(!sessionStorage.getItem('confettiFired')){
+        confetti({ particleCount: 160, spread: 80, origin: { y: 0.6 } });
+        sessionStorage.setItem('confettiFired','1');
+      }
+    }
+
+    function initSwiper(){
+      return new Swiper('.swiper-container',{
+        slidesPerView:1, spaceBetween:18, loop:true, centeredSlides:true,
+        pagination:{el:'.swiper-pagination',clickable:true},
+        navigation:{nextEl:'.swiper-button-next',prevEl:'.swiper-button-prev'},
+        breakpoints:{640:{slidesPerView:1},768:{slidesPerView:2},1024:{slidesPerView:3}}
+      });
+    }
+
+    function renderMessages(messages){
+      const grid=document.getElementById('messages-grid');
+      grid.innerHTML='';
+      getLimitedMessages(messages).forEach((m,idx)=>{
+        const card=document.createElement('article');
+        card.className='bg-gradient-to-br from-black/30 to-white/2 rounded-xl p-4 flex gap-3 items-start hover:scale-102 transform transition-shadow shadow-md glass';
+        card.setAttribute('data-aos','fade-up');
+        card.setAttribute('data-aos-delay',String(40*idx));
+        card.innerHTML=`
+          <img src="${m.photo}" alt="${escapeHtml(m.name)}" class="w-14 h-14 rounded-full object-cover flex-shrink-0 border-2 border-gold1" loading="lazy">
+          <div class="flex-1"><h3 class="text-sm font-semibold">${escapeHtml(m.name)}</h3>
+          <p class="mt-2 text-sm text-gray-200">${escapeHtml(m.message)}</p></div>`;
+        grid.appendChild(card);
+      });
+    }
+
+    function escapeHtml(text){
+      const map={'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}; 
+      return String(text).replace(/[&<>"']/g,(m)=>map[m]);
+    }
+
+    document.addEventListener('DOMContentLoaded',()=>{
+      initTyped(); initAOS(); runConfettiOnce(); initSwiper(); renderMessages(sampleMessages);
+      document.getElementById('year').textContent=new Date().getFullYear();
+
+      // Tambahan: tombol celebrate
+      document.getElementById('celebrateBtn').addEventListener('click',()=>{
+        confetti({particleCount:200,spread:100,origin:{y:0.6}});
+        confetti({particleCount:120,spread:60,angle:60,origin:{x:0}});
+        confetti({particleCount:120,spread:60,angle:120,origin:{x:1}});
+      });
+    });
+
+    window.addEventListener('load',()=>{ if(AOS) AOS.refresh(); });
+  </script>
+</body>
+</html>
